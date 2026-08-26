@@ -1,0 +1,345 @@
+:root {
+  --color-verde: #2E7D32;
+  --color-amarillo: #fbc02d;
+  --color-tierra: #8d6e63;
+  --color-blanco: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  width: 100%;
+  overflow-x: hidden; /* evita scroll horizontal en móviles */
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(180deg, #000000 0%, #030303 20%, #154617 100%);
+  color: rgba(225, 232, 235, 0.897);
+  padding: 25px 2px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,.35);
+}
+
+header h1 { margin: 10px 0 5px; }
+header p { margin: 0; }
+
+/* NAV */
+nav {
+  background: var(--color-verde);
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  margin: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  background: var(--color-amarillo);
+  color: var(--color-tierra);
+  border-radius: 6px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+  background: var(--color-blanco);
+}
+
+.hero img {
+  width: 100%;
+  height: auto; /* se ajusta automáticamente */
+  object-fit: cover;
+  display: block;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--color-blanco);
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 2px 2px 10px var(--color-tierra);
+  width: 90%;
+  z-index: 2;
+}
+
+.hero p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: var(--color-blanco);
+  font-size: 22px;
+  width: 80%;
+  text-shadow: 2px 2px 10px var(--color-tierra);
+  z-index: 2;
+}
+
+.hero button {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* BOTONES */
+button {
+  background: var(--color-verde);
+  color: var(--color-blanco);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--color-amarillo);
+  color: var(--color-tierra);
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* SERVICIOS */
+.servicios {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--color-blanco);
+  width: 220px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #e5e5e5;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+
+/* FOOTER */
+footer {
+  background: var(--color-verde);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 20px;
+}
+
+/* NOSOTROS */
+.nosotros {
+  background: var(--color-blanco);
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.nosotros h2 {
+  font-size: 42px;
+  color: var(--color-verde);
+  margin-bottom: 25px;
+}
+
+.nosotros p {
+  font-size: 24px;
+  color: var(--color-tierra);
+  line-height: 1.8;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background: #25D366;
+  color: var(--color-blanco);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp:hover {
+  background: #1EBE5D;
+  transform: scale(1.1);
+}
+
+/* CONTACTO */
+.contacto {
+  background: var(--color-blanco);
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.contacto form {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+  border-color: var(--color-verde);
+  outline: none;
+  box-shadow: 0 0 8px rgba(46,125,50,0.3);
+}
+
+.contacto button {
+  background: #25D366;
+  color: var(--color-blanco);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contacto button:hover {
+  background: #1EBE5D;
+  transform: scale(1.05);
+}
+
+/* ENCABEZADO */
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: var(--color-blanco);
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  max-width: 100%; /* se ajusta al ancho de pantalla */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.encabezado h2 {
+  margin: 0;
+  color: var(--color-verde);
+  font-size: 28px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav a {
+    display: inline-block;
+    margin: 5px 3px;
+    padding: 8px 6px;
+    font-size: 14px;
+  }
+
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+  .nosotros h2 { font-size: 28px; }
+  .nosotros p { font-size: 18px; }
+
+  .whatsapp {
+    width: 60px;
+    height: 60px;
+    right: 15px;
+    bottom: 15px;
+  }
+}
+/* AJUSTES PARA CELULAR */
+
+  .servicios {
+    padding: 20px 10px;
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    padding: 25px 20px;
+  }
+
+  .encabezado {
+    width: 100%;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .contacto {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .hero {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .ventajas h2 {
+  text-align: center;   /* centra el título */
+  margin-bottom: 30px;  /* espacio debajo del título */
+}
+.contenedor-ventajas {
+  display: flex;              /* activa flexbox */
+  flex-direction: row;        /* los pone en fila horizontal */
+  justify-content: space-around; /* los distribuye con espacio uniforme */
+  align-items: flex-start;    /* los alinea arriba */
+  flex-wrap: wrap;            /* si no caben, bajan a otra línea */
+  gap: 1 px;                  /* espacio entre cada cuadro */
+}
